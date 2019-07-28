@@ -9,6 +9,14 @@ import javafx.scene.control.Label;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+//The controller class is another part of a javafx app containing all the stuff required during the working of the app
+//This implements the interface called Initiazable containing the abstract method called initialize
+//which does what it really means i.e. initializing the scene with certain objects and ready to launch methods
+
+/*      IMPORTANT
+avoide mistake of taking the things like Button and lable from java.awt while working with javafx,it might be cause of
+a bug that might not be easily determinable*/
+
 public class Controller implements Initializable {
 
 	@FXML
@@ -42,6 +50,9 @@ public class Controller implements Initializable {
 
 		convertButton.setOnAction((actionEvent) -> convert());
 	}
+
+
+    //The main logic part
 	private void convert(){
 		String input = userInputField.getText(); //we get the temperature as string
 		float enteredTemperature=0.0f;

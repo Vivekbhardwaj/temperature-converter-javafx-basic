@@ -10,6 +10,8 @@ import javafx.stage.Stage;
 
 import java.util.Optional;
 
+//in a javafx desktop app the class containing main method extends Application class which is part of javafx .
+//Application class consists of one abstract method which must be overridden i.e. the "start" method
 public class myMain extends Application {
 
 	public static void main(String[] args){
@@ -17,15 +19,25 @@ public class myMain extends Application {
 	}
 
 
-	//life cycle of javaFX init-start-stop   but still main method is executed first
-	//simply creates application
+	//life cycle of javaFX  "init-start-stop"  but still main method is executed first as soon as the application starts
+
+
+    //'@' symbol acts as an address specifier 
 	@Override
 	public void init() throws Exception {
-		super.init();
+        //the code present in this method is executed as soon as the application loads that is even before it starts
+		super.init();          //super keyword invokes the init methods as per the definition in the Application class
+        
 	}
 
 
-	//makes application visible to user
+	/*makes application visible to user ,it is the abstract method of Applications class which in must in order to
+    execute the application
+    In laymen terms Stage is the complete window that pops up in front of the user as soon as the application
+    starts,the window alongwith the minimize maximize and close buttons
+    while scene is the part of stage other than the top bar containing the three buttons.
+    scene is the part which can show some dynamic stuff.*/
+
 	@Override
 	public void start(Stage primaryStage) throws Exception {
 		FXMLLoader loader = new FXMLLoader(getClass().getResource("app_layout.fxml"));
