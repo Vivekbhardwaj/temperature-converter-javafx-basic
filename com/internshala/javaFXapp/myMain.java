@@ -44,6 +44,9 @@ public class myMain extends Application {
 		VBox rootNode = loader.load();
 
 		Scene scene = new Scene(rootNode);
+        
+        Pane menuPane= (Pane) rootNode.getChildren().get(0);
+		menuPane.getChildren().add(createMenubar());
 
 		primaryStage.setScene(scene);
 		primaryStage.setTitle("Temperature Convertor");
@@ -51,6 +54,18 @@ public class myMain extends Application {
 		primaryStage.show();
 	}
 
+	private MenuBar createMenubar() {
+		Menu fileMenu = new Menu("file");
+		Menu helpMenu = new Menu("Help");
+
+		MenuItem aboutApp = new MenuItem("About App");
+		aboutApp.setOnAction(actionEvent -> aboutApp());
+
+		helpMenu.getItems().add(aboutApp);
+		MenuBar menuBar = new MenuBar();
+		menuBar.getMenus().addAll(fileMenu,helpMenu);
+		return menuBar;
+	}
 
 
 	//creating a dilague box through menu
