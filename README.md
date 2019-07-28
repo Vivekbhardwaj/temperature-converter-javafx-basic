@@ -1,4 +1,4 @@
-# temperature-converter-javafx-basic
+# Temperature converter javafx-basic Desktop App
 "A beginner friendly basic javafx desktop application."
 It can be of great help, understanding the basic structure of the a desktop app.
 And an oveview of flow of code.
@@ -20,4 +20,4 @@ to ensure java compiler adds required javafx modules during compilation
 (Feel free to add basic stuff to the app)
 Hope to learn from the community.
 
-
+SOURCE: INTERNSHALA SUMMER TRAINING ON CORE JAVA
