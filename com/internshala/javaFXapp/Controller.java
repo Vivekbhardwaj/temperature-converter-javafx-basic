@@ -14,7 +14,7 @@ import java.util.ResourceBundle;
 //which does what it really means i.e. initializing the scene with certain objects and ready to launch methods
 
 /*      IMPORTANT
-avoide mistake of taking the things like Button and lable from java.awt while working with javafx,it might be cause of
+avoid mistake of taking the things like Button and lable from java.awt while working with javafx,it might be cause of
 a bug that might not be easily determinable*/
 
 public class Controller implements Initializable {
